@@ -21,6 +21,8 @@ print(step2, type(step2))
 # ➔ 합격한 녀석들만 맨 앞(word.strip())에서 
 # 예쁘게 포장되어 리스트로 완성된다!"
 
+text = "파이썬훈련은 꾸준해야한답니다. 이제, 데이터분석은 모두의 훈련이 되었지요."
+
 words = [ word.strip() for word in str(text).replace(',', ' ').split() if word.strip()]
 
 print(words, type(words))
