@@ -12,6 +12,8 @@ for region in all_region_names:
     # [3단계] 맨 앞에 있던 region(결과물)을 바구니에 담습니다.
     result.append(region)
 
+print(result)
+
 
 word = """서울시청 주관으로 
 지역 활성화를 위하여 잔치국수를 
@@ -32,11 +34,11 @@ found_word = None
 # 전체 문장이 실행되는 순서:
 # 1) 오른쪽 컴프리헨션이 돌면서 하나씩 비교하고 ([True, False, False])
 # 2) any()가 그걸 받아서 "True가 있네!" 하고 최종 True를 반환합니다.
-if any(searchword in word for searchword in base_stop_words):
+if any(searchword in word for searchword in base_stop_words):    # 한 단어라도 들어가면 안되는 단어 뱉어내기
     print(f"위의 검수단어가 포함되어있습니다.")
 
 findwords = []
-for searchword in base_stop_words:
+for searchword in base_stop_words:                       
     if searchword in word:
         findwords.append(searchword) 
 
